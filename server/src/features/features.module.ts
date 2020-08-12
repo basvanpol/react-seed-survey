@@ -1,7 +1,7 @@
-import { QuestionsModule } from './questions/questions.module';
+import { SurveysModule } from './surveys/surveys.module';
 import { Module } from '@nestjs/common';
 
 @Module({
-    imports: [QuestionsModule],
+    imports: [SurveysModule],
 })
 export class FeaturesModule { }
