@@ -6,17 +6,19 @@ import { createStore } from 'redux';
 import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit'
 import reducers from './store/reducers';
 import { BrowserRouter } from 'react-router-dom';
+import thunkMiddleware from 'redux-thunk'
 import App from './App';
 
-const store = configureStore({
-  reducer: reducers
-})
 
-//createStore(reducers);
+
+const store = configureStore({
+  reducer: reducers,
+  middleware: [...getDefaultMiddleware()],
+})
 
 const app = (
   <Provider store={store}>
-    <BrowserRouter>
+    <BrowserRouter forceRefresh={false}>
       <App></App>
     </BrowserRouter>
   </Provider>
