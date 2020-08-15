@@ -1,11 +1,11 @@
 import { Controller, Get, Res, HttpStatus, Header } from '@nestjs/common';
+import { mockData } from './surveys.mock-data';
 
 @Controller('surveys')
 export class SurveysController {
-
     @Get()
     getSurveys() {
-        const surveys = [1, 3, 5, 7, 9];
+        const surveys = [...mockData];
         return surveys;
     }
 }

@@ -1,5 +1,7 @@
+import { IQuestionData } from "models/question";
+
 export class SurveysAPI {
-    static async fetchSurveys(): Promise<number[]> {
+    static async fetchSurveys(): Promise<IQuestionData[]> {
         return fetch('http://localhost:3000/surveys', {
             method: "get"
         }).then((response) => {

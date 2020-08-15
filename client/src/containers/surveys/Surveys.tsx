@@ -6,35 +6,41 @@ interface IProps {
 }
 const Surveys: React.FC<IProps> = (props) => {
     const dispatch = useDispatch();
-    const surveyState = useSelector(
+    const questions = useSelector(
         (state: RootState) => {
-            return state.survey
+            return state.survey.questions
+        }
+    )
+    const loading = useSelector(
+        (state: RootState) => {
+            return state.survey.loading
         }
     )
 
     useEffect(
         () => {
-            if (!surveyState.loading && surveyState.surveys.length === 0) {
-                console.log('dispatch');
+            if (!loading && questions && questions.length === 0) {
                 dispatch(fetchSurveys());
             }
-        }, [surveyState]);
+        }, [loading, questions]);
 
 
     useEffect(
         () => {
-            if (surveyState.loading) {
-                console.log('hoi!');
+            if (loading) {
                 dispatch(getSurveySuccess());
             }
-        }, [surveyState]
+        }, [loading]
     );
     return (
         <React.Fragment>
             <div>Surveys</div>
-            {surveyState.surveys.map((survey) => {
-                return <div key={survey}>{survey}</div>
-            })}
+            {
+                questions && questions.length > 0 &&
+                questions.map(({id, question}, index) => {
+                    return <div key={'aloha'+id}>{question.text}</div>
+                })
+            }
         </React.Fragment>
     )
 }

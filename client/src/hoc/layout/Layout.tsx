@@ -13,9 +13,6 @@ export const Layout: React.FC = ({ children }) => {
     return (
         <React.Fragment>
             <Toolbar drawerToggleClicked={sideDrawerToggleHandler} />
-            {/* <SideDrawer
-                    open={this.state.showSideDrawer}
-                    closed={this.sideDrawerClosedHandler} /> */}
             <main className={classes.Content}>
                 {children}
             </main>
