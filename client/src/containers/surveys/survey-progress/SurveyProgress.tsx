@@ -8,7 +8,7 @@ const SurveyProgress: React.FC = () => {
         <React.Fragment>
             {
                 !isCompleted && (
-                    <div className="survey__progress">{progressIndex}/{totalQuestions}</div>
+                    <div className="survey__progress">{progressIndex} / {totalQuestions}</div>
                 )
             }
             {
