@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import classes from './Layout.scss';
 import Toolbar from '../../components/navigation/toolbar/Toolbar';
 
 export const Layout: React.FC = ({ children }) => {
@@ -13,7 +12,7 @@ export const Layout: React.FC = ({ children }) => {
     return (
         <React.Fragment>
             <Toolbar drawerToggleClicked={sideDrawerToggleHandler} />
-            <main className={classes.Content}>
+            <main className="page__content-container">
                 {children}
             </main>
         </React.Fragment>

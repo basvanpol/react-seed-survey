@@ -1,0 +1,11 @@
+.app__container {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    will-change: transform;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background: pink;
+  }

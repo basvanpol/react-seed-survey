@@ -1,17 +1,11 @@
 import React from 'react';
 import classes from './Toolbar.scss';
 import NavigationItems from '../navigation-items/NavigationItems';
-// import Logo from '../../Logo/Logo';
-// import NavigationItems from '../NavigationItems/NavigationItems';
-// import DrawerToggle from '../SideDrawer/DrawerToggle/DrawerToggle';
+import './Toolbar.scss';
 
 const Toolbar: React.FC<{drawerToggleClicked: Function}> = ( {drawerToggleClicked} ) => (
-    <header className={classes.Toolbar}>
-        {/* <DrawerToggle clicked={drawerToggleClicked} />
-        <div className={classes.Logo}>
-            <Logo />
-        </div> */}
-        <nav className={classes.DesktopOnly}>
+    <header className="toolbar__container">
+        <nav>
             <NavigationItems />
         </nav>
     </header>

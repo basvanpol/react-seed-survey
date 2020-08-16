@@ -3,10 +3,11 @@ import { Route, Switch } from 'react-router-dom';
 import Layout from './hoc/layout/Layout';
 import Home from './containers/home/Home';
 import Surveys from './containers/surveys/Surveys';
+import './App.scss';
 
 const App: React.FC = () => {
     return (
-        <div>
+        <div className="app__container">
             <Layout>
                 <Switch>
                     <Route path="/" exact component={Home} />

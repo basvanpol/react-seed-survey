@@ -8,7 +8,7 @@ import reducers from './store/reducers';
 import { BrowserRouter } from 'react-router-dom';
 import thunkMiddleware from 'redux-thunk'
 import App from './App';
-
+import './styles/index.scss';
 
 
 const store = configureStore({

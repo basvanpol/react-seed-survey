@@ -6,8 +6,8 @@ import NavigationItem from './navigation-item/navigationItem';
 
 const NavigationItems: React.FC = () => (
     <ul className={classes.NavigationItems}>
-        <NavigationItem link="/" exact>Burger Builder</NavigationItem>
-        <NavigationItem link="/surveys">Surveys</NavigationItem>
+        <NavigationItem link="/" exact>Home</NavigationItem>
+        <NavigationItem link="/surveys">Cycling Survey</NavigationItem>
     </ul>
 );
 
