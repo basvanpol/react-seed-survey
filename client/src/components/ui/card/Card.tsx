@@ -32,9 +32,6 @@ const Card: React.FC<IProps> = ({ i, x, y, rot, scale, trans, bind, data }) => {
             >
                 <div className={classes.Card}>
                     <h2>{question.text}</h2>
-                    {/* <h2>{age}</h2>
-                    <h5>{distance}</h5>
-                    <h5>{bio}</h5> */}
                 </div>
             </animated.div>
         </animated.div>
